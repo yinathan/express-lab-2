@@ -14,3 +14,10 @@ app.get("/greeting/:name", (req, res) => {
 app.listen(3000, () => {
     console.log("js is working")
 })
+
+app.get("/tip/:total/:percentage", (req, res) => {
+    let total = parseInt(req.params.total)
+    let percentage = parseInt(req.params.percentage)
+    let tip = (total * percentage) / 100
+    res.send(`${tip}`)
+})
