@@ -50,7 +50,9 @@ app.get("/magic/:question", (req, res) => {
     let randomElement = magicBall[Math.floor(Math.random() * magicBall.length)];
     res.send(`<html>
     <body>
+    <h1>${question.charAt(0).toUpperCase()}${question.slice(1)}</h1>
     <h1>${randomElement}</h1>
     </body>
     </html>`)
 })
+
